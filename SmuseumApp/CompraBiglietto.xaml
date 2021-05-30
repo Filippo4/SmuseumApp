@@ -1,0 +1,54 @@
+﻿<Window x:Class="SmuseumApp.CompraBiglietto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmuseumApp"
+        mc:Ignorable="d"
+        Title="AcquistaBiglietto" Height="600" Width="500" ResizeMode="NoResize">
+    <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="220"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Background="Black" Content="                 Smuseum" Foreground="White" FontSize="36" />
+
+            <StackPanel Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="22"></RowDefinition>
+                        <RowDefinition Height="42"></RowDefinition>
+                        <RowDefinition Height="42"></RowDefinition>
+                        <RowDefinition Height="42"></RowDefinition>
+                        <RowDefinition Height="55"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Nome :" FontSize="18" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <TextBox x:Name="txt_nome" FontSize="18" Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Width="200" Height="25"></TextBox>
+
+                    <Label Content="Cognome :" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"></Label>
+                    <TextBox x:Name="txt_cognome" FontSize="18" Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Width="200" Height="25"></TextBox>
+
+                    <RadioButton Content="M" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" ></RadioButton>
+                    <RadioButton Content="F" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" ></RadioButton>
+
+                    <Label Content="Scegli data :" FontSize="18" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <DatePicker x:Name="dtp_data" FontSize="14" Grid.Row="4" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Width="200" Height="25"></DatePicker>
+
+                </Grid>
+            </StackPanel>
+
+
+            <Button Content="Prenota" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Grid.Row="2" Click="Button_Click"></Button>
+            <ListBox x:Name="lsb_Prenotazioni" Height="200" Width="450" BorderThickness="2" BorderBrush="Black" Grid.Row="3" ></ListBox>
+
+        </Grid>
+    </StackPanel>
+</Window>
