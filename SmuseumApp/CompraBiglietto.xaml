@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmuseumApp"
         mc:Ignorable="d"
-        Title="AcquistaBiglietto" Height="600" Width="500" ResizeMode="NoResize">
+        Title="PrenotaBiglietto" Height="600" Width="500" ResizeMode="NoResize">
     <StackPanel>
         <Grid>
             <Grid.RowDefinitions>
@@ -31,10 +31,10 @@
                     </Grid.RowDefinitions>
 
                     <Label Content="Nome :" FontSize="18" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                    <TextBox x:Name="txt_nome" FontSize="18" Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Width="200" Height="25"></TextBox>
+                    <TextBox x:Name="txt_nome" FontSize="18" Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Width="200" Height="30"></TextBox>
 
                     <Label Content="Cognome :" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"></Label>
-                    <TextBox x:Name="txt_cognome" FontSize="18" Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Width="200" Height="25"></TextBox>
+                    <TextBox x:Name="txt_cognome" FontSize="18" Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Width="200" Height="30"></TextBox>
 
                     <RadioButton Content="M" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" ></RadioButton>
                     <RadioButton Content="F" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" ></RadioButton>

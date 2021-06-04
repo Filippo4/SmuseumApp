@@ -9,7 +9,6 @@ namespace ClassiSmuseum
         public Visitatore v { get; set; }
         public DateTime data { get; set; }
         public string formato { get; set; }
-
         public Biglietto(Visitatore v, DateTime data, string formato)
         {
             this.v = v;
@@ -24,6 +23,9 @@ namespace ClassiSmuseum
         {
             return data;
         }
-
+        public string GetBiglietto()
+        {
+            return $"{v.GetNome()} {v.GetCognome()} {data} ";
+        }
     }
 }

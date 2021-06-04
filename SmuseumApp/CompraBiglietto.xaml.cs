@@ -30,15 +30,21 @@ namespace SmuseumApp
         {
             string nome = txt_nome.Text;
             string cognome = txt_cognome.Text;
-            DateTime data = DateTime.Parse(dtp_data.Text);
-            Biglietto b = new Biglietto(vis, data, "online");
-            vis.AddBiglietto(b);
-            //for(int i =0;i<vis.biglietti.Count;i++)
-            foreach (Biglietto b1 in vis.GetBiglietti())
+            if (nome == " " || cognome==" ")
             {
-                lsb_Prenotazioni.Items.Add($"{nome} {cognome} {data}");
-            }
+                MessageBox.Show("Non puoi lasciare questi campi liberi !", "Attenzione", MessageBoxButton.OK, MessageBoxImage.Warning);
 
+            }
+            DateTime data = DateTime.Parse(dtp_data.Text);
+            if(data < DateTime.Now)
+            {
+                MessageBox.Show("Non puoi prenotare il biglietto per una data antecedente a quella odierna!", "Attenzione", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }else
+            {
+                Biglietto b = new Biglietto(vis, data, "online");
+                vis.AddBiglietto(b);
+                lsb_Prenotazioni.Items.Add($" {nome} {cognome}, {b.GetData().ToShortDateString()}, 5,00€");
+            }
         }
     }
 }
